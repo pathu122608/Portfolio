@@ -1,0 +1,252 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+    
+
+}
+
+
+
+body {
+    background: rgba(13, 10, 0, 0.961);
+    color: #fff;
+}
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10px;
+    background: transparent;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    z-index: 100;
+    
+}
+.logo {
+    font-size: 25px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    cursor: pointer;
+    margin-left: 50px;
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+}
+@keyframes slideRight {
+    0% {
+        transform:translateX(-100px);
+        opacity:0;
+    }
+
+     100% {
+        transform:translateX(0);
+        opacity:1;
+    }
+}
+.navbar a {
+    font-size: 18px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 40px;
+    left: -40px;
+    transition: .3s;
+    cursor: pointer;
+    position: relative;
+    display: inline-block;
+    opacity: 0;
+    animation: slideTop .5s ease forwards;
+    animation-delay: calc(.2s * var(--i));
+
+}
+@keyframes slideTop {
+    0% {
+        transform:translateY(100px);
+        opacity:0;
+    }
+
+     100% {
+        transform:translateY(0);
+        opacity:1;
+    }
+}
+
+#menu-icon {
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: none;
+}
+
+.navbar a::after {
+    background-color: rgb(232, 115, 31);
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0%;
+    height: 3px;
+    transition: width 0.3s ease;
+
+}
+
+.navbar a:hover::after {
+    width: 100%;
+}
+ .navbar a:hover,
+ .navbar a.active{
+    color:rgb(232, 115, 31) ;
+    
+ }
+
+ .heading{
+     text-align: center;
+    color: #fff;
+    padding: 1rem;
+    position: relative;
+     opacity: 0;
+    animation: slideLeft 1s ease forwards;
+    animation-delay: 1s;
+ }
+
+  .heading::after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 4px;
+    width: 100px;
+    background-color: chocolate;
+    border-radius: 2px;
+
+ }
+ 
+ .projects-box{
+    display:flex;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    text-align: center;
+    grid-gap: 2rem;
+    padding: 1rem 90px;
+    font-size: .2rem;
+    opacity: 0;
+    animation: slideTop 1s ease forwards;
+    animation-delay: 2s;
+    transition: .3s;
+    
+    
+ }
+
+ .projects-card{
+    
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border: 2px solid chocolate;
+    border-radius: 3rem;
+    gap: 2rem;
+    padding: 5rem 2rem;
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: 0 0 5px chocolate;
+    transition: 0.3s ease;
+
+
+ }
+
+ .projects-card:hover{
+    box-shadow: 0 0 25px chocolate, 0 0 50px chocolate;
+    transform: scale(1.02);
+ }
+ .projects-card img{
+    max-width:50px;
+    border-radius: 2em;
+    object-fit: cover;
+
+ }
+
+ .projects-card h3{
+    font-size: 1.5rem;
+ }
+
+ .projects-card p{
+    font-size: 1rem;
+ }
+ .btn {
+    display: inline-block;
+    padding: 1rem 3rem;
+    background-color: chocolate;
+    box-shadow: 0 0 25px chocolate;
+    border-radius: 3rem;
+    font-size: 1rem;
+    color: black;
+    border: 2px solid transparent;
+    font-weight: 600;
+    transition: 0.3s ease-in-out;
+    text-decoration: none;
+   
+
+ }
+ .btn:hover{
+    transform: scale(1.05);
+    box-shadow: 0 0 25px chocolate,0 0 50px chocolate;
+
+ }
+  @keyframes slideLeft {
+    0% {
+        transform:translateX(100px);
+        opacity:0;
+    }
+
+     100% {
+        transform:translateX(0);
+        opacity:1;
+    }
+}
+
+
+@media(max-width:895px){
+    #menu-icon{
+        display: block;
+
+    }
+    .navbar{
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: 40%;
+        padding: .5rem 3%;
+        backdrop-filter: blur(20px);
+        border-top: 2px solid chocolate;
+        border-bottom-left-radius: 2rem;
+        border-bottom: 2px solid chocolate;
+        display: none;
+    }
+    .navbar.active{
+        display: block;
+
+    }
+    .navbar a{
+        display: block;
+        font-size: 1.5rem;
+        margin: 3rem;
+        color: #fff;
+    }
+   
+} 
+
+
+@media (max-width: 991px){
+    .projects-box{
+        padding: 50px;
+        flex-direction: column;
+    }
+
+}
+ 

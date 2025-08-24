@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects</title>
+     <link rel="stylesheet" href="contact.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+    
+
+</head>
+<body>
+     <header class="header">
+        <a href="index.html" class="logo">Portfolio.</a>
+         <i class="fas fa-bars" id="menu-icon"></i>
+        <nav  class="navbar">
+            <a href="index.html" style="--i:1">Home</a>
+            <a href="about.html" style="--i:2">About Me</a>
+            <a href="skills.html" style="--i:3" >Skills</a>
+            <a href="Projects.html" style="--i:4" >Projects</a>
+            <a href="contact.html" style="--i:5" class="active">Contact</a>
+        </nav>
+    </header>
+    
+    <section class="Contact">
+        <div class="content">
+            <h2>Contact <span>Me</span></h2>
+            <br>
+            <p>  We’d love to hear from you! Whether you have questions, feedback, or 
+    just want to say hello, you can contact us through the details below.</p>
+
+        </div>
+        <div class="container">
+            <div class="contactInfo">
+                <div class="box">
+                    <div class="icon"><i class="fa-solid fa-location-dot"></i></div>
+                    <div class="text">
+                        <h3>Address</h3>
+                        <p>Kilinochchi,<br>poonakary,Mulankavil</p>
+                    </div>
+                </div>
+                 <div class="box">
+                    <div class="icon"><i class="fa-solid fa-phone"></i></div>
+                    <div class="text">
+                        <h3>Phone</h3>
+                        <p>0761875479</p>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="icon"><i class="fa-solid fa-envelope"></i></div>
+                    <div class="text">
+                        <h3>Email</h3>
+                        <p>pathusan17@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+            <div class="contactForm">
+                <form>
+                    <h2>Send Message</h2>
+                    <div class="inputBox">
+                        <input type="text" name="" required="required">
+                        <span>Full Name</span>
+                    </div>
+                   <div class="inputBox">
+                        <input type="text" name="" required="required">
+                        <span>Email</span>
+                    </div>
+                    <div class="inputBox">
+                        <textarea required="required"></textarea>
+                        <span>Type your Message...</span>
+                    </div>
+                    <div class="inputBox">
+                        <input type="submit" name="" value="Send">
+                        
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+<script>
+    let menuIcon= document.querySelector('#menu-icon');
+let navbar = document.querySelector('.navbar');
+let sections = document.querySelectorAll('section');
+let navlinks = document .querySelectorAll('header nav a');
+
+menuIcon.onclick = () =>{
+    menuIcon.classList.toggle('bx-x');
+    navbar.classList.toggle('active');
+}
+</script>
+     
+
+</body>
+</html>

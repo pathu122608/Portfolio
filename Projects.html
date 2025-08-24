@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects</title>
+     <link rel="stylesheet" href="Projects.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+    
+
+</head>
+<body>
+     <header class="header">
+        <a href="index.html" class="logo">Portfolio.</a>
+         <i class="fas fa-bars" id="menu-icon"></i>
+        <nav  class="navbar">
+            <a href="index.html" style="--i:1">Home</a>
+            <a href="about.html" style="--i:2">About Me</a>
+            <a href="skills.html" style="--i:3" >Skills</a>
+            <a href="Projects.html" style="--i:4" class="active">Projects</a>
+            <a href="contact.html" style="--i:5">Contact</a>
+        </nav>
+    </header>
+     
+
+<br>
+<br>
+
+    <div class="projects" id="page">
+
+        <h1 class="heading">Projects</h1>
+        <br>
+        <div class="projects-box">
+            <div class="projects-card">
+                <img src="pro1.png" alt="">
+
+                <h3>Space Kids – Educational Website Design</h3>
+                <p>Space Kids is an interactive educational website designed to help children explore the universe in a fun and engaging way. The goal was to simplify complex space concepts and present them with a kid-friendly, playful interface.</p>
+                <a href="https://www.figma.com/design/WB783xSthfdCR9BATPBL7R/Untitled?node-id=0-1&t=hGZEiNHzTLwg0jyg-1"   target="_blank" class="btn">Review Project</a>
+
+            </div>
+            <div class="projects-card">
+                <img src="pro2.png" alt="">
+                
+
+                <h3>Munchee Website – Product Showcase Design</h3>
+                <p>This project is a modern website design concept for Munchee, a popular snack and biscuit brand. The goal was to create a visually appealing and product-focused interface that highlights different biscuit varieties while maintaining the brand identity.</p>
+                <a href="https://www.figma.com/design/cJGqzyMNYoE0KgUb3E5mpA/Munchee?node-id=0-1&t=FEuKLlo4m55YFc4y-1"  target="_blank"  class="btn">Review Project</a>
+
+            </div>
+            <div class="projects-card">
+                <img src="pro3.png" alt="">
+                   
+                
+                <h3>Catch the Stars! – Space Website Game</h3>
+                <p>“Catch the Stars!” is an interactive browser-based game developed for my Space Kids website project. The game is designed to engage children while they learn about space by collecting stars in a fun and playful way.</p>
+                <a href="https://pathu122608.github.io/spacekidsgame/" target="_blank"  class="btn">Review Project</a>
+
+            </div>
+            
+        </div>
+
+    </div>
+    <script>
+        let menuIcon= document.querySelector('#menu-icon');
+let navbar = document.querySelector('.navbar');
+let sections = document.querySelectorAll('section');
+let navlinks = document .querySelectorAll('header nav a');
+
+menuIcon.onclick = () =>{
+    menuIcon.classList.toggle('bx-x');
+    navbar.classList.toggle('active');
+}
+    </script>
+</body>
+</html>

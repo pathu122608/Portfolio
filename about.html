@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AboutMe</title>
+     <link rel="stylesheet" href="about.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+
+
+</head>
+<body>
+     <header class="header">
+        <a href="index.html" class="logo">Portfolio.</a>
+         <i class="fas fa-bars" id="menu-icon"></i>
+        <nav  class="navbar">
+            <a href="index.html" style="--i:1">Home</a>
+            <a href="about.html" style="--i:2" class="active">About Me</a>
+            <a href="skills.html" style="--i:3">Skills</a>
+            <a href="Projects.html" style="--i:4">Projects</a>
+            <a href="contact.html" style="--i:5">Contact</a>
+        </nav>
+    </header>
+
+    <br>
+
+    <br>
+    <br>
+    <br>
+
+      <div class="about">
+        <h2 class="heading">About<span> Me</span></h2>
+    
+        
+       <div class="aboutimg">
+            <img src="about.png" alt="">
+            <span class="circlespain"></span>
+        </div>
+
+
+        <div class="aboutcontent">
+            <h3><span>BICT</span> student at the University of Rajarata.</h3>
+           
+            <p>
+             Hi, I’m Pathushan, an undergraduate student at the University of Rajarata, Faculty of Technology, Department of Information and Communication Technology. I’m currently pursuing my Bachelor of Information and Communication Technology (BICT) degree.
+            </p>
+
+          <div class="hidden-text" id="moreText">
+             <p>
+                  <br>
+             I’m passionate about cybersecurity and eager to strengthen my skills to contribute to a safer digital world. My curiosity drives me to keep learning, while my commitment ensures I give my best to every challenge I take on.<br><br>
+             Beyond security, I have a strong enthusiasm for Artificial Intelligence, web development, and technology solutions. I enjoy exploring innovative ideas and applying them to create real-world solutions that make a difference.<br><br>
+           My ultimate goal is to grow into a skilled professional who bridges cutting-edge technology with practical problem-solving.
+
+
+              </p>
+            </div>
+
+             <span class="read-btn" id="toggleBtn" onclick="toggleText()">Read more</span>
+        </div>
+        
+    </div>
+    
+    
+   <script>
+    let menuIcon= document.querySelector('#menu-icon');
+let navbar = document.querySelector('.navbar');
+let sections = document.querySelectorAll('section');
+let navlinks = document .querySelectorAll('header nav a');
+
+menuIcon.onclick = () =>{
+    menuIcon.classList.toggle('bx-x');
+    navbar.classList.toggle('active');
+}
+
+//read more
+
+function toggleText() {
+  let moreText = document.getElementById("moreText");
+  let btn = document.getElementById("toggleBtn");
+
+  moreText.classList.toggle("show");
+
+  if (btn.innerHTML === "Read more") {
+    btn.innerHTML = "Read less";
+  } else {
+    btn.innerHTML = "Read more";
+  }
+}
+   </script>
+
+</body>
+</html>

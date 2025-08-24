@@ -1,0 +1,354 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+    
+
+}
+
+
+
+body {
+    display: flex;
+    background: rgba(13, 10, 0, 0.961);
+    color: #fff;
+    justify-content: center;
+    align-items: center;
+    
+}
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10px;
+    background: transparent;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    z-index: 100;
+
+}
+.logo {
+    font-size: 25px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    cursor: pointer;
+    margin-left: 50px;
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+}
+@keyframes slideRight {
+    0% {
+        transform:translateX(-100px);
+        opacity:0;
+    }
+
+     100% {
+        transform:translateX(0);
+        opacity:1;
+    }
+}
+.navbar a {
+    font-size: 18px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 40px;
+    left: -40px;
+    transition: .3s;
+    cursor: pointer;
+    position: relative;
+    display: inline-block;
+    opacity: 0;
+    animation: slideTop .5s ease forwards;
+    animation-delay: calc(.2s * var(--i));
+
+}
+@keyframes slideTop {
+    0% {
+        transform:translateY(100px);
+        opacity:0;
+    }
+
+     100% {
+        transform:translateY(0);
+        opacity:1;
+    }
+}
+
+#menu-icon {
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: none;
+}
+
+.navbar a::after {
+    background-color: rgb(232, 115, 31);
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0%;
+    height: 3px;
+    transition: width 0.3s ease;
+
+}
+
+.navbar a:hover::after {
+    width: 100%;
+}
+ .navbar a:hover,
+ .navbar a.active{
+    color:rgb(232, 115, 31) ;
+    
+ }
+ .Contact{
+    position: relative;
+    min-height: 100vh;
+    padding: 50px 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+ }
+
+ .Contact .content {
+    max-width: 800px;
+    text-align: center;
+ }
+
+ span{
+    color: chocolate;
+ }
+
+ .content{
+     opacity: 0;
+    animation: slideBottom 1s ease forwards;
+    animation-delay: 1s;
+ }
+
+ .Contact .content h2 {
+    font-size: 36px;
+    font-weight: 500;
+    color: #fff;
+ }
+  .Contact .content p {
+    
+    font-weight: 300;
+    color: #fff;
+ }
+.container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+.contactInfo{
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+    animation-delay: 1s;
+}
+
+.container .contactInfo{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+.container .contactInfo .box{
+    position: relative;
+    padding: 20px 0;
+    display: flex;
+
+}
+.container .contactInfo .box .icon{
+    min-width: 60px;
+    height: 60px;
+    background: chocolate;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-size: 22px;
+    color: black;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    
+
+}
+.container .contactInfo .box .icon:hover{
+    box-shadow: 0 0 20px chocolate;
+}
+.container .contactInfo .box .text{
+    display: flex;
+    margin-left: 20px;
+    font-size: 16px;
+    flex-direction: column;
+    font-weight: 300;
+
+}
+.container .contactInfo .box .text h3{
+    font-weight: 500;
+    color: rgb(247, 112, 15);
+}
+.contactForm {
+    width: 40%;
+    padding: 40px;
+    background:transparent;
+    border: 2px solid transparent;
+    cursor: pointer;
+    opacity: 0;
+    animation: slideLeft 1s ease forwards;
+    animation-delay: 1s;
+    transition: 0.6s ease-in-out;
+}
+.contactForm:hover{
+    box-shadow: 0 0 10px chocolate;
+    
+}
+
+.contactForm h2{
+    font-size: 30px;
+    color: #fff;
+    font-weight: 500;
+
+}
+
+.contactForm .inputBox {
+    position: relative;
+    width: 100%;
+    margin-top: 10px;
+
+}
+.contactForm .inputBox input,
+.contactForm .inputBox textarea {
+    width: 100%;
+    padding: 5px 0;
+    font-size: 16px;
+    margin: 10px 0;
+    border: none;
+    border-bottom:2px solid #333;
+    color: #fff;
+    outline: none;
+    background: transparent;
+    resize: none;
+
+}
+.contactForm .inputBox span{
+    position: absolute;
+    left: 0;
+    padding: 5px 0;
+    font-size: 16px;
+    margin: 10px 0;
+    pointer-events: none;
+    transition: 0.5s;
+    color: rgb(182, 180, 176);
+}
+.contactForm .inputBox input:focus ~span,
+.contactForm .inputBox input:valid ~span,
+.contactForm .inputBox textarea:focus ~span,
+.contactForm .inputBox textarea:valid ~span
+{
+    color: chocolate;
+    font-size: 12px;
+    transform: translateY(-20px);
+
+
+}
+.contactForm .inputBox input[type="submit"]
+{
+    width: 100px;
+    background: chocolate;
+    color: rgb(15, 15, 15);
+    border-radius: 20px;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 18px;
+    border: 2px solid transparent;
+    box-shadow: 0 0 10px chocolate;
+    transition: 0.3s ease-in-out;
+}
+.contactForm .inputBox input[type="submit"]:hover{
+    box-shadow: 0 0 20px chocolate;
+
+}
+
+
+@media (max-width: 991px){
+    .Contact{
+        padding: 50px;
+    }
+    .container{
+        flex-direction: column;
+    }
+    .container .contactInfo,
+    .contactForm
+    {
+        width: 100%;
+
+    }
+}
+ 
+@keyframes slideLeft {
+    0% {
+        transform:translateX(100px);
+        opacity:0;
+    }
+
+     100% {
+        transform:translateX(0);
+        opacity:1;
+    }
+}
+
+@keyframes slideBottom {
+    0% {
+        transform:text-decoration(100px);
+        opacity:0;
+    }
+
+     100% {
+        transform:text-decoration(0);
+        opacity:1;
+    }
+}
+
+
+@media(max-width:895px){
+    #menu-icon{
+        display: block;
+
+    }
+    .navbar{
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: 40%;
+        padding: .5rem 3%;
+        backdrop-filter: blur(20px);
+        border-top: 2px solid chocolate;
+        border-bottom-left-radius: 2rem;
+        border-bottom: 2px solid chocolate;
+        display: none;
+    }
+    .navbar.active{
+        display: block;
+
+    }
+    .navbar a{
+        display: block;
+        font-size: 1.5rem;
+        margin: 3rem;
+        color: #fff;
+    }
+    .home{
+        flex-direction: column-reverse;
+        margin: 5rem 4rem;
+
+    }
+
+} 

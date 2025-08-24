@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AboutMe</title>
+     <link rel="stylesheet" href="skill.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+    
+
+</head>
+<body>
+     <header class="header">
+        <a href="index.html" class="logo">Portfolio.</a>
+        <i class="fas fa-bars" id="menu-icon"></i>
+        <nav  class="navbar">
+            <a href="index.html" style="--i:1">Home</a>
+            <a href="about.html" style="--i:2">About Me</a>
+            <a href="skills.html" style="--i:3" class="active">Skills</a>
+            <a href="Projects.html" style="--i:4">Projects</a>
+            <a href="contact.html" style="--i:5">Contact</a>
+        </nav>
+    </header>
+
+    <section class="skill">
+    <div class="inner">
+        <br>
+        <br>
+        <br>
+        
+        <div class="header2">
+            <h1>My Skills</h1>
+        </div>
+        <div class="container">
+            <div class="skill-box">
+                <div class="skill-title">
+                    <div  class="img">
+                        <img src="html.png" class="skill-icon">
+                    </div>
+                    <h3>HTML</h3>
+                </div>
+                <p>The standard markup language used to create and structure content on the web. It defines the layout and elements of webpages.</p>
+            </div>
+            <div class="skill-box">
+                <div class="skill-title">
+                    <div  class="img">
+                        <img src="css.png" class="skill-icon">
+                    </div>
+                    <h3>CSS</h3>
+                </div>
+                <p>A stylesheet language that controls the presentation, formatting, and layout of HTML elements, making websites visually appealing and responsive.</p>
+            </div>
+            <div class="skill-box">
+                <div class="skill-title">
+                    <div  class="img">
+                        <img src="js.png" class="skill-icon">
+                    </div>
+                    <h3>JavaScript</h3>
+                </div>
+                <p>A programming language that adds interactivity and dynamic behavior to websites, such as animations, form validation, and API calls.</p>
+            </div>
+            <div class="skill-box">
+                <div class="skill-title">
+                    <div  class="img">
+                        <img src="php.png" class="skill-icon">
+                    </div>
+                    <h3>PHP</h3>
+                </div>
+                <p>A server-side scripting language used to build dynamic web applications, handle databases, and create interactive websites.</p>
+            </div>
+            <div class="skill-box">
+                <div class="skill-title">
+                    <div  class="img">
+                        <img src="mysql.png" class="skill-icon">
+                    </div>
+                    <h3>MySQL</h3>
+                </div>
+                <p>A popular open-source relational database management system used to store and manage data for websites and applications.</p>
+            </div>
+             <div class="skill-box">
+                <div class="skill-title">
+                    <div  class="img">
+                        <img src="python.png" class="skill-icon">
+                    </div>
+                    <h3>Python</h3>
+                </div>
+                <p>A versatile high-level programming language known for its readability and wide applications in web development, data science, automation, and more.</p>
+            </div>
+             <div class="skill-box">
+                <div class="skill-title">
+                    <div  class="img">
+                        <img src="c.png" class="skill-icon">
+                    </div>
+                    <h3>C</h3>
+                </div>
+                <p>A powerful general-purpose programming language often used for system/software development and embedded programming.</p>
+            </div>
+            <div class="skill-box">
+                <div class="skill-title">
+                    <div  class="img">
+                        <img src="figma.webp" class="skill-icon">
+                    </div>
+                    <h3>Figma</h3>
+                </div>
+                <p>A collaborative design tool used for creating UI/UX designs, prototypes, and wireframes. It’s browser-based and ideal for teamwork.</p>
+            </div>
+            <div class="skill-box">
+                <div class="skill-title">
+                    <div  class="img">
+                        <img src="lr.png" class="skill-icon">
+                    </div>
+                    <h3>Adobe Lightroom</h3>
+                </div>
+                <p>A photo editing and management software used to enhance, organize, and retouch images with professional-grade tools.</p>
+            </div>
+        </div>
+    </div>
+    </section>
+
+<script>let menuIcon= document.querySelector('#menu-icon');
+let navbar = document.querySelector('.navbar');
+let sections = document.querySelectorAll('section');
+let navlinks = document .querySelectorAll('header nav a');
+
+
+menuIcon.onclick = () =>{
+    menuIcon.classList.toggle('bx-x');
+    navbar.classList.toggle('active');
+}
+</script>
+    </body>
+    </html>
